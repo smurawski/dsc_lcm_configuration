@@ -7,7 +7,6 @@
 # Licensed under the Apache 2 License.
 # See LICENSE for more details
 
-
 module DscLcmConfiguration
   class LcmBase
 
@@ -30,7 +29,7 @@ module DscLcmConfiguration
         :configuration_mode_frequency_mins => 30,
         :reboot_if_needed => false,
         :refresh_mode => "PUSH",
-        :refresh_frequency_mins => 15
+        :refresh_frequency_mins => 15,
       }
     end
 

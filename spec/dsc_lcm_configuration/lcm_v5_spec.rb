@@ -14,7 +14,7 @@ describe DscLcmConfiguration::LcmV5 do
       :debug_mode => "All",
       :reboot_if_needed => false,
       :refresh_mode => "PUSH",
-      :refresh_frequency_mins => 30
+      :refresh_frequency_mins => 30,
     }
   end
 
@@ -123,7 +123,7 @@ describe DscLcmConfiguration::LcmV5 do
         :debug_mode => "All",
         :reboot_if_needed => false,
         :refresh_mode => "PUSH",
-        :refresh_frequency_mins => 30
+        :refresh_frequency_mins => 30,
       }
     end
 
