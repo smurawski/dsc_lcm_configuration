@@ -22,7 +22,7 @@ module DscLcmConfiguration
     end
 
     def lcm_properties
-      {
+      @lcm_properties ||= {
         :allow_module_overwrite => false,
         :certificate_id => nil,
         :configuration_mode => "ApplyAndAutoCorrect",
@@ -40,7 +40,7 @@ module DscLcmConfiguration
       end
 
       config.each do |setting, value|
-        send(setting, value)
+        send(setting, value) if lcm_properties.keys.include? setting
       end
     end
 

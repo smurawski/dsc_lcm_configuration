@@ -118,4 +118,26 @@ describe DscLcmConfiguration::LcmBase do
       expect(lcm_with_config.lcm_config).to eq(updated_config_settings)
     end
   end
+
+  describe "With improper config" do
+    let(:incorrect_lcm_config) { { :allow_module_overwrite => true, :debug_mode => "None" } }
+    let(:lcm_with_incorrect_config) do
+      DscLcmConfiguration::Factory.create("wmf4", incorrect_lcm_config)
+    end
+    let(:incorrect_config_settings) do
+      {
+        :allow_module_overwrite => true,
+        :certificate_id => "$null",
+        :configuration_mode => "ApplyAndAutoCorrect",
+        :configuration_mode_frequency_mins => 30,
+        :reboot_if_needed => false,
+        :refresh_mode => "PUSH",
+        :refresh_frequency_mins => 15,
+      }
+    end
+
+    it "only has valid configuration keys" do
+      expect(lcm_with_incorrect_config.lcm_config).to eq(incorrect_config_settings)
+    end
+  end
 end
