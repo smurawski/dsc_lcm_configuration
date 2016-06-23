@@ -14,14 +14,13 @@ describe DscLcmConfiguration::LcmV4 do
       :debug_mode => "All",
       :reboot_if_needed => false,
       :refresh_mode => "PUSH",
-      :refresh_frequency_mins => 15
+      :refresh_frequency_mins => 15,
     }
   end
 
   describe "Default LCM Properties" do
 
     let(:lcm) { DscLcmConfiguration::Factory.create("wmf4_with_update") }
-
 
     it "action_after_reboot defaults to StopConfiguration" do
       expect(lcm.action_after_reboot).to eq(base_config_settings[:action_after_reboot])
@@ -124,7 +123,7 @@ describe DscLcmConfiguration::LcmV4 do
         :debug_mode => "All",
         :reboot_if_needed => false,
         :refresh_mode => "PUSH",
-        :refresh_frequency_mins => 15
+        :refresh_frequency_mins => 15,
       }
     end
 
