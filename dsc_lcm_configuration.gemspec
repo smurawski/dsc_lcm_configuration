@@ -8,6 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = DscLcmConfiguration::VERSION
   spec.authors       = ["Steven Murawski"]
   spec.email         = ["steven.murawski@gmail.com"]
+  spec.license           = "Apache 2"
+
 
   spec.summary       = %q{Creates proper LCM configurations for Windows PowerShell DSC.}
   spec.description   = %q{Creates proper LCM configurations for Windows PowerShell DSC.}
